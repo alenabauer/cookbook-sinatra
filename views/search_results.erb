@@ -1,0 +1,10 @@
+<h2>Search results for "<%= @ingredient %>"</h2>
+<% @results.each_with_index do |name, index| %>
+  <li>
+    <form action="/import_one" method="post" style="display:inline;">
+      <input type="text" name="ingredient" value=<%= @ingredient%> style="display: none;" >
+      <input name=<%= index %> type="submit" value="+">
+    </form>
+    <%= name %>
+  </li>
+<% end %>

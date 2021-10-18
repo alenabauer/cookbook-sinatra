@@ -1,0 +1,16 @@
+<h1>Your Recipes</h1>
+<ol>
+<% @recipes.each_with_index do |recipe, index| %>
+  <li>
+    <form action="/delete" method="post" style="display:inline;"><input name=<%= index %> type="submit" value="X"></form>
+    <form action="/mark" method="post" style="display:inline;"><input name=<%= index %> type="submit" value="V"></form>
+    [<%= recipe.done? ? 'X' : '&nbsp;&nbsp;&nbsp;' %>]
+    <%= recipe.name %>
+    (<%= recipe.rating %>&nbsp;/&nbsp;5 )
+    ---------<%= recipe.prep_time %>
+    ---------<em><%= recipe.description %></em>
+  </li>
+<% end %>
+</ol>
+<a href='/new'>Add a new recipe</a><br>
+<a href='/import'>Import from AllRecipes</a>

@@ -1,0 +1,21 @@
+<h1>Add a new recipe</h1>
+<form action="/recipes" method="post" >
+  <label for="rname">Recipe name:</label><br>
+  <input type="text" id="rname" name="rname" required><br>
+  <label for="rdescription">Recipe description:</label><br>
+  <textarea id="rdescription" name="rdescription" cols="40" rows="5" required></textarea><br>
+  <p>Please rate the recipe</p>
+  <input type="radio" id="1star" name="rating" value="1">
+  <label for="1star">1</label>
+  <input type="radio" id="2stars" name="rating" value="2">
+  <label for="2stars">2</label>
+  <input type="radio" id="3stars" name="rating" value="3">
+  <label for="3stars">3</label>
+  <input type="radio" id="4stars" name="rating" value="4">
+  <label for="4stars">4</label>
+  <input type="radio" id="5stars" name="rating" value="5">
+  <label for="5stars">5</label><br>
+  <label for="preptime">Preparation time:</label><br>
+  <input type="text" id="preptime" name="preptime" required><br>
+  <input type="submit" value="Add!">
+</form>
